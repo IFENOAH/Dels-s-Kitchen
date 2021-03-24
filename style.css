@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h6{
+    font-family: 'Pacifico', cursive;
+    color:rgba(248, 170, 2, 0.938);
+    font-size: 2.5rem;
+}
+
+h5{
+    font-family: 'Pacifico', cursive;
+    color:rgba(248, 170, 2, 0.938);
+    font-size: 4rem;
+}
+
+.home-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height:1vh;
+    top: 1vh;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    border-bottom: 0.01px solid #ffffff3a;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.nav-links a{
+    text-decoration: none;
+    transition: 0.2s ease-in;
+    font-family: Helvetica, sans-serif;
+}
+
+a{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .15em;
+    display: block;
+    padding: 15px 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+a:hover{
+    color: rgba(248, 170, 2, 0.938);
+}
+
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+
+a:hover:after { 
+    width: 100%; 
+    left: 0;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.burger{
+    display: none;
+    cursor: pointer; 
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px;
+    transition: all 0.4s ease;
+}
+
+
+
+.banner-image{
+    background-image:url("maxresdefault\ copy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.btn{
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background:none;
+    padding: 8px 30px;
+    font-family: 'Assistant', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    background: #cfcaca;
+    color: #000000;
+}
+
+
+@media screen and (max-width: 780px) {
+    body{
+        overflow-x: hidden; 
+    }
+
+    .nav-links{
+        position: absolute;
+        height: 50vh;
+        right: 0%;
+        top: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        background-color: #000000;
+    }
+
+    .name{
+        color: #ffffff;
+        font-size: 50px;
+        font-family: 'Raleway', sans-serif;
+        width: 50%;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .burger{
+        display: block;
+        width: 100%;
+        left: 80%;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+
+
+@keyframes navLinkFade{
+
+    from{
+        opacity: 0;
+        transform: translateX(50px)
+
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+
+
+
+
+/*---------About us page----------*/
+
+.about-page{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #222222;
+    min-height: 90vh;
+    width: 100%;
+}
+
+.about-message{
+    width: 50%;
+    min-height: 90vh;
+    color: #ffffff;
+}
+
+.about-message h2{
+    color: rgba(248, 170, 2, 0.938);
+    text-decoration: underline;
+    width: 50%;
+    min-height: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 3rem;
+    margin-left: 3rem;
+    margin-top: 5rem;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+}
+
+.about-message p:nth-child(2){
+    line-height: 3vh;
+    margin: 2rem 3rem 3rem 3rem;
+}
+
+.about-message p:nth-child(3){
+    line-height: 3vh;
+    margin: 3rem 3rem 3rem 3rem;
+}
+
+.about-image{
+    background-image: url("desktop-food-background-wallpaper-preview.jpg");
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    width: 50%;
+    min-height: 90vh;
+    display: block;
+}
+
+
+@media screen and (max-width: 780px){
+    .about-image{
+        display: none;
+    }
+
+    .about-message h2{
+        text-decoration: underline;
+        width: 100%;
+        min-height: 5vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 2rem;
+        margin-left: 3rem;
+        margin-top: 5rem;
+        font-family: 'Pacifico', cursive;
+        text-transform: uppercase;
+    }
+
+    .about-page{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #222222;
+        min-height: 90vh;
+        width: 100%;
+    }
+    
+    .about-message{
+        width: 100%;
+        min-height: 90vh;
+        color: #ffffff;
+    }
+}
+
+
+
+/*--------------------menus page--------------*/
+
+
+.menus-page{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.menus-page nav{
+    background: #ffffff;
+    min-height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menus-page nav h2{
+    color: rgba(248, 170, 2, 0.938);
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.menus-container1{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.menus-container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container{
+    overflow: hidden;
+    margin: 1rem;
+    min-height: 10vh;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+}
+
+.img-container img:hover{
+    transform: scale(1.2);
+}
